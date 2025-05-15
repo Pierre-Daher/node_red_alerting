@@ -1,0 +1,72 @@
+{"col1":"name","col2":"nodeId"}
+{"col1":"001_Calcul_puissance_ph1_n_voute","col2":"ns=16;s=Presse_API_Lent_001_Calcul_puissance_ph1_n_voute"}
+{"col1":"002_Calcul_puissance_ph2_n_voute","col2":"ns=16;s=Presse_API_Lent_002_Calcul_puissance_ph2_n_voute"}
+{"col1":"003_Calcul_puissance_ph3_n_voute","col2":"ns=16;s=Presse_API_Lent_003_Calcul_puissance_ph3_n_voute"}
+{"col1":"004_Calcul_puissance_ph1_n_sole","col2":"ns=16;s=Presse_API_Lent_004_Calcul_puissance_ph1_n_sole"}
+{"col1":"005_Calcul_puissance_ph2_n_sole","col2":"ns=16;s=Presse_API_Lent_005_Calcul_puissance_ph2_n_sole"}
+{"col1":"006_Calcul_puissance_ph3_n_sole","col2":"ns=16;s=Presse_API_Lent_006_Calcul_puissance_ph3_n_sole"}
+{"col1":"007_Calcul_puissance_ph1_n_chaudiere_inf","col2":"ns=16;s=Presse_API_Lent_007_Calcul_puissance_ph1_n_chaudiere_inf"}
+{"col1":"008_Calcul_puissance_ph2_n_chaudiere_inf","col2":"ns=16;s=Presse_API_Lent_008_Calcul_puissance_ph2_n_chaudiere_inf"}
+{"col1":"009_Calcul_puissance_ph3_n_chaudiere_inf","col2":"ns=16;s=Presse_API_Lent_009_Calcul_puissance_ph3_n_chaudiere_inf"}
+{"col1":"010_mesure position presse relative","col2":"ns=16;s=Presse_API_Lent_010_mesure position presse relative"}
+{"col1":"011_Nombre_pièce_à_produire_of","col2":"ns=16;s=Presse_API_Lent_011_Nombre_pièce_à_produire_of"}
+{"col1":"012_Cpt_pièces_produite_of","col2":"ns=16;s=Presse_API_Lent_012_Cpt_pièces_produite_of"}
+{"col1":"013_Rec_num_prog_code_outil","col2":"ns=16;s=Presse_API_Lent_013_Rec_num_prog_code_outil"}
+{"col1":"014_a_determiner","col2":"ns=16;s=Presse_API_Lent_014_a_determiner"}
+{"col1":"015_tension phase 1","col2":"ns=16;s=Presse_API_Lent_015_tension phase 1"}
+{"col1":"016_tension phase 2","col2":"ns=16;s=Presse_API_Lent_016_tension phase 2"}
+{"col1":"017_tension phase 3","col2":"ns=16;s=Presse_API_Lent_017_tension phase 3"}
+{"col1":"018_Numero_prog_PC","col2":"ns=16;s=Presse_API_Lent_018_Numero_prog_PC"}
+{"col1":"019_Mesure_Effort_Estampage","col2":"ns=16;s=Presse_API_Lent_019_Mesure_Effort_Estampage"}
+{"col1":"020_Temps_estampage","col2":"ns=16;s=Presse_API_Lent_020_Temps_estampage"}
+{"col1":"021_Temps_exposition_four_IR","col2":"ns=16;s=Presse_API_Lent_021_Temps_exposition_four_IR"}
+{"col1":"022_Temperature_Plateau_Sup_Gauche","col2":"ns=16;s=Presse_API_Lent_022_Temperature_Plateau_Sup_Gauche"}
+{"col1":"023_Regul_OT_sup","col2":"ns=16;s=Presse_API_Lent_023_Regul_OT_sup"}
+{"col1":"024_Temperature_Plateau_Inf_Gauche","col2":"ns=16;s=Presse_API_Lent_024_Temperature_Plateau_Inf_Gauche"}
+{"col1":"025_Regul_OT_Inf","col2":"ns=16;s=Presse_API_Lent_025_Regul_OT_Inf"}
+{"col1":"026_Etat_prog","col2":"ns=16;s=Presse_API_Lent_026_Etat_prog"}
+{"col1":"027_PC_serialisee","col2":"ns=16;s=Presse_API_Lent_027_PC_serialisee"}
+{"col1":"028_Pos_Regle_1","col2":"ns=16;s=Presse_API_Lent_028_Pos_Regle_1"}
+{"col1":"029_Pos_Regle_2","col2":"ns=16;s=Presse_API_Lent_029_Pos_Regle_2"}
+{"col1":"030_Pos_Moy_abs","col2":"ns=16;s=Presse_API_Lent_030_Pos_Moy_abs"}
+{"col1":"031_Pos_Moy_rel","col2":"ns=16;s=Presse_API_Lent_031_Pos_Moy_rel"}
+{"col1":"032_Temperature_amb_Four","col2":"ns=16;s=Presse_API_Lent_032_Temperature_amb_Four"}
+{"col1":"033_Num_OF_PC_1","col2":"ns=16;s=Presse_API_Lent_033_Num_OF_PC_1"}
+{"col1":"034_Ref_PC_1","col2":"ns=16;s=Presse_API_Lent_034_Ref_PC_1"}
+{"col1":"035_Duree_cycle","col2":"ns=16;s=Presse_API_Lent_035_Duree_cycle"}
+{"col1":"name","col2":"nodeId"}
+{"col1":"001_Calcul_puissance_ph1_n_voute","col2":"ns=16;s=Presse_API_Lent_001_Calcul_puissance_ph1_n_voute"}
+{"col1":"002_Calcul_puissance_ph2_n_voute","col2":"ns=16;s=Presse_API_Lent_002_Calcul_puissance_ph2_n_voute"}
+{"col1":"003_Calcul_puissance_ph3_n_voute","col2":"ns=16;s=Presse_API_Lent_003_Calcul_puissance_ph3_n_voute"}
+{"col1":"004_Calcul_puissance_ph1_n_sole","col2":"ns=16;s=Presse_API_Lent_004_Calcul_puissance_ph1_n_sole"}
+{"col1":"005_Calcul_puissance_ph2_n_sole","col2":"ns=16;s=Presse_API_Lent_005_Calcul_puissance_ph2_n_sole"}
+{"col1":"006_Calcul_puissance_ph3_n_sole","col2":"ns=16;s=Presse_API_Lent_006_Calcul_puissance_ph3_n_sole"}
+{"col1":"007_Calcul_puissance_ph1_n_chaudiere_inf","col2":"ns=16;s=Presse_API_Lent_007_Calcul_puissance_ph1_n_chaudiere_inf"}
+{"col1":"008_Calcul_puissance_ph2_n_chaudiere_inf","col2":"ns=16;s=Presse_API_Lent_008_Calcul_puissance_ph2_n_chaudiere_inf"}
+{"col1":"009_Calcul_puissance_ph3_n_chaudiere_inf","col2":"ns=16;s=Presse_API_Lent_009_Calcul_puissance_ph3_n_chaudiere_inf"}
+{"col1":"010_mesure position presse relative","col2":"ns=16;s=Presse_API_Lent_010_mesure position presse relative"}
+{"col1":"011_Nombre_pièce_à_produire_of","col2":"ns=16;s=Presse_API_Lent_011_Nombre_pièce_à_produire_of"}
+{"col1":"012_Cpt_pièces_produite_of","col2":"ns=16;s=Presse_API_Lent_012_Cpt_pièces_produite_of"}
+{"col1":"013_Rec_num_prog_code_outil","col2":"ns=16;s=Presse_API_Lent_013_Rec_num_prog_code_outil"}
+{"col1":"014_a_determiner","col2":"ns=16;s=Presse_API_Lent_014_a_determiner"}
+{"col1":"015_tension phase 1","col2":"ns=16;s=Presse_API_Lent_015_tension phase 1"}
+{"col1":"016_tension phase 2","col2":"ns=16;s=Presse_API_Lent_016_tension phase 2"}
+{"col1":"017_tension phase 3","col2":"ns=16;s=Presse_API_Lent_017_tension phase 3"}
+{"col1":"018_Numero_prog_PC","col2":"ns=16;s=Presse_API_Lent_018_Numero_prog_PC"}
+{"col1":"019_Mesure_Effort_Estampage","col2":"ns=16;s=Presse_API_Lent_019_Mesure_Effort_Estampage"}
+{"col1":"020_Temps_estampage","col2":"ns=16;s=Presse_API_Lent_020_Temps_estampage"}
+{"col1":"021_Temps_exposition_four_IR","col2":"ns=16;s=Presse_API_Lent_021_Temps_exposition_four_IR"}
+{"col1":"022_Temperature_Plateau_Sup_Gauche","col2":"ns=16;s=Presse_API_Lent_022_Temperature_Plateau_Sup_Gauche"}
+{"col1":"023_Regul_OT_sup","col2":"ns=16;s=Presse_API_Lent_023_Regul_OT_sup"}
+{"col1":"024_Temperature_Plateau_Inf_Gauche","col2":"ns=16;s=Presse_API_Lent_024_Temperature_Plateau_Inf_Gauche"}
+{"col1":"025_Regul_OT_Inf","col2":"ns=16;s=Presse_API_Lent_025_Regul_OT_Inf"}
+{"col1":"026_Etat_prog","col2":"ns=16;s=Presse_API_Lent_026_Etat_prog"}
+{"col1":"027_PC_serialisee","col2":"ns=16;s=Presse_API_Lent_027_PC_serialisee"}
+{"col1":"028_Pos_Regle_1","col2":"ns=16;s=Presse_API_Lent_028_Pos_Regle_1"}
+{"col1":"029_Pos_Regle_2","col2":"ns=16;s=Presse_API_Lent_029_Pos_Regle_2"}
+{"col1":"030_Pos_Moy_abs","col2":"ns=16;s=Presse_API_Lent_030_Pos_Moy_abs"}
+{"col1":"031_Pos_Moy_rel","col2":"ns=16;s=Presse_API_Lent_031_Pos_Moy_rel"}
+{"col1":"032_Temperature_amb_Four","col2":"ns=16;s=Presse_API_Lent_032_Temperature_amb_Four"}
+{"col1":"033_Num_OF_PC_1","col2":"ns=16;s=Presse_API_Lent_033_Num_OF_PC_1"}
+{"col1":"034_Ref_PC_1","col2":"ns=16;s=Presse_API_Lent_034_Ref_PC_1"}
+{"col1":"035_Duree_cycle","col2":"ns=16;s=Presse_API_Lent_035_Duree_cycle"}

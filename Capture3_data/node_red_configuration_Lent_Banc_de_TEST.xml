@@ -1,0 +1,37 @@
+<Variables>
+	<Variable Name="001_Calcul_puissance_ph1_n_voute" NodeId="ns=16;s=Presse_API_Lent_001_Calcul_puissance_ph1_n_voute" Unit="" Format="#,#"/>
+	<Variable Name="002_Calcul_puissance_ph2_n_voute" NodeId="ns=16;s=Presse_API_Lent_002_Calcul_puissance_ph2_n_voute" Unit="" Format="#,#"/>
+	<Variable Name="003_Calcul_puissance_ph3_n_voute" NodeId="ns=16;s=Presse_API_Lent_003_Calcul_puissance_ph3_n_voute" Unit="" Format="#,#"/>
+	<Variable Name="004_Calcul_puissance_ph1_n_sole" NodeId="ns=16;s=Presse_API_Lent_004_Calcul_puissance_ph1_n_sole" Unit="" Format="#,#"/>
+	<Variable Name="005_Calcul_puissance_ph2_n_sole" NodeId="ns=16;s=Presse_API_Lent_005_Calcul_puissance_ph2_n_sole" Unit="" Format="#,#"/>
+	<Variable Name="006_Calcul_puissance_ph3_n_sole" NodeId="ns=16;s=Presse_API_Lent_006_Calcul_puissance_ph3_n_sole" Unit="" Format="#,#"/>
+	<Variable Name="007_Calcul_puissance_ph1_n_chaudiere_inf" NodeId="ns=16;s=Presse_API_Lent_007_Calcul_puissance_ph1_n_chaudiere_inf" Unit="" Format="#,#"/>
+	<Variable Name="008_Calcul_puissance_ph2_n_chaudiere_inf" NodeId="ns=16;s=Presse_API_Lent_008_Calcul_puissance_ph2_n_chaudiere_inf" Unit="" Format="#,#"/>
+	<Variable Name="009_Calcul_puissance_ph3_n_chaudiere_inf" NodeId="ns=16;s=Presse_API_Lent_009_Calcul_puissance_ph3_n_chaudiere_inf" Unit="" Format="#,#"/>
+	<Variable Name="010_mesure position presse relative" NodeId="ns=16;s=Presse_API_Lent_010_mesure position presse relative" Unit="" Format="#,#"/>
+	<Variable Name="011_Nombre_pièce_à_produire_of" NodeId="ns=16;s=Presse_API_Lent_011_Nombre_pièce_à_produire_of" Unit="" Format="#,#"/>
+	<Variable Name="012_Cpt_pièces_produite_of" NodeId="ns=16;s=Presse_API_Lent_012_Cpt_pièces_produite_of" Unit="" Format="#,#"/>
+	<Variable Name="013_Rec_num_prog_code_outil" NodeId="ns=16;s=Presse_API_Lent_013_Rec_num_prog_code_outil" Unit="" Format="#,#"/>
+	<Variable Name="014_a_determiner" NodeId="ns=16;s=Presse_API_Lent_014_a_determiner" Unit="" Format="#,#"/>
+	<Variable Name="015_tension phase 1" NodeId="ns=16;s=Presse_API_Lent_015_tension phase 1" Unit="" Format="#,#"/>
+	<Variable Name="016_tension phase 2" NodeId="ns=16;s=Presse_API_Lent_016_tension phase 2" Unit="" Format="#,#"/>
+	<Variable Name="017_tension phase 3" NodeId="ns=16;s=Presse_API_Lent_017_tension phase 3" Unit="" Format="#,#"/>
+	<Variable Name="018_Numero_prog_PC" NodeId="ns=16;s=Presse_API_Lent_018_Numero_prog_PC" Unit="" Format="#,#"/>
+	<Variable Name="019_Mesure_Effort_Estampage" NodeId="ns=16;s=Presse_API_Lent_019_Mesure_Effort_Estampage" Unit="" Format="#,#"/>
+	<Variable Name="020_Temps_estampage" NodeId="ns=16;s=Presse_API_Lent_020_Temps_estampage" Unit="" Format="#,#"/>
+	<Variable Name="021_Temps_exposition_four_IR" NodeId="ns=16;s=Presse_API_Lent_021_Temps_exposition_four_IR" Unit="" Format="#,#"/>
+	<Variable Name="022_Temperature_Plateau_Sup_Gauche" NodeId="ns=16;s=Presse_API_Lent_022_Temperature_Plateau_Sup_Gauche" Unit="" Format="#,#"/>
+	<Variable Name="023_Regul_OT_sup" NodeId="ns=16;s=Presse_API_Lent_023_Regul_OT_sup" Unit="" Format="#,#"/>
+	<Variable Name="024_Temperature_Plateau_Inf_Gauche" NodeId="ns=16;s=Presse_API_Lent_024_Temperature_Plateau_Inf_Gauche" Unit="" Format="#,#"/>
+	<Variable Name="025_Regul_OT_Inf" NodeId="ns=16;s=Presse_API_Lent_025_Regul_OT_Inf" Unit="" Format="#,#"/>
+	<Variable Name="026_Etat_prog" NodeId="ns=16;s=Presse_API_Lent_026_Etat_prog" Unit="" Format="#,#"/>
+	<Variable Name="027_PC_serialisee" NodeId="ns=16;s=Presse_API_Lent_027_PC_serialisee" Unit="" Format="#,#"/>
+	<Variable Name="028_Pos_Regle_1" NodeId="ns=16;s=Presse_API_Lent_028_Pos_Regle_1" Unit="" Format="#,#"/>
+	<Variable Name="029_Pos_Regle_2" NodeId="ns=16;s=Presse_API_Lent_029_Pos_Regle_2" Unit="" Format="#,#"/>
+	<Variable Name="030_Pos_Moy_abs" NodeId="ns=16;s=Presse_API_Lent_030_Pos_Moy_abs" Unit="" Format="#,#"/>
+	<Variable Name="031_Pos_Moy_rel" NodeId="ns=16;s=Presse_API_Lent_031_Pos_Moy_rel" Unit="" Format="#,#"/>
+	<Variable Name="032_Temperature_amb_Four" NodeId="ns=16;s=Presse_API_Lent_032_Temperature_amb_Four" Unit="" Format="#,#"/>
+	<Variable Name="033_Num_OF_PC_1" NodeId="ns=16;s=Presse_API_Lent_033_Num_OF_PC_1" Unit="" Format="#,#"/>
+	<Variable Name="034_Ref_PC_1" NodeId="ns=16;s=Presse_API_Lent_034_Ref_PC_1" Unit="" Format="#,#"/>
+	<Variable Name="035_Duree_cycle" NodeId="ns=16;s=Presse_API_Lent_035_Duree_cycle" Unit="" Format="#,#"/>
+</Variables>

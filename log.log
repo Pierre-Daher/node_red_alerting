@@ -1,0 +1,237 @@
+6 May 11:46:47 - [info] 
+
+Welcome to Node-RED
+===================
+
+6 May 11:46:47 - [info] Node-RED version: v3.0.2
+6 May 11:46:47 - [info] Node.js  version: v16.16.0
+6 May 11:46:47 - [info] Windows_NT 10.0.17763 x64 LE
+6 May 11:46:51 - [info] Loading palette nodes
+6 May 11:47:00 - [info] Settings file  : c:\Users\Daher\.node-red\settings.js
+6 May 11:47:00 - [info] Context store  : 'default' [module=memory]
+6 May 11:47:00 - [info] User directory : c:\Users\Daher\.node-red
+6 May 11:47:00 - [warn] Projects disabled : editorTheme.projects.enabled=false
+6 May 11:47:00 - [info] Flows file     : c:\Users\Daher\.node-red\flows.json
+6 May 11:47:00 - [info] Server now running at http://127.0.0.1:1880/
+6 May 11:47:00 - [warn] 
+
+---------------------------------------------------------------------
+Your flow credentials file is encrypted using a system-generated key.
+
+If the system-generated key is lost for any reason, your credentials
+file will not be recoverable, you will have to delete it and re-enter
+your credentials.
+
+You should set your own key using the 'credentialSecret' option in
+your settings file. Node-RED will then re-encrypt your credentials
+file using your chosen key the next time you deploy a change.
+---------------------------------------------------------------------
+
+6 May 11:47:00 - [info] Starting flows
+6 May 11:47:00 - [info] Started flows
+6 May 14:28:28 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:28:31 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:28:36 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: Backoff aborted.
+6 May 14:28:39 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:28:42 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:28:45 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:28:48 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:28:51 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:28:54 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:28:57 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:00 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:03 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:06 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:10 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:13 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:16 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:19 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:22 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:25 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:27 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:30 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:33 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:37 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:40 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:43 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:46 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:49 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:52 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:55 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:29:58 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:01 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:04 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:07 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:10 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:13 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:16 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:19 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:22 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:25 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:28 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:31 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:33 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:36 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:39 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:42 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:45 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:48 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:51 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:54 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:30:57 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:00 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:04 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:07 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:10 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:13 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:16 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:19 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:22 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:25 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:28 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:31 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:34 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:37 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:40 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:43 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:46 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:49 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:52 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:55 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:31:58 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:01 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:04 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:07 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:10 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:13 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:16 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:19 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:22 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:25 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:28 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:31 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:34 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:37 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:40 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:44 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:46 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:49 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:52 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:55 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:32:59 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:02 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:05 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:08 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:11 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:14 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:17 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:20 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:23 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:26 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:29 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:32 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:35 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:38 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:41 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:44 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:47 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:50 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:53 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:56 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:33:59 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:34:02 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:34:05 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:34:08 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:34:11 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:34:15 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:34:18 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:34:21 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:34:24 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:34:27 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:35:36 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:35:40 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:35:43 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:35:46 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:35:49 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:35:53 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:35:56 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:35:59 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:02 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:05 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:08 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:12 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:15 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:18 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:21 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:25 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:28 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:31 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:34 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:38 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:41 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:44 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:47 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:51 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:54 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:36:57 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:00 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:03 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:07 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:10 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:13 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:16 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:19 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:22 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:26 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:29 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:32 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:35 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:38 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:41 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:45 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:48 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:51 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:54 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:37:57 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:00 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:03 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:07 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:10 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:13 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:16 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:19 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:22 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:26 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:29 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:32 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:35 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:38 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:42 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:45 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:48 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:51 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:55 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:38:58 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:01 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:04 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:07 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:11 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:14 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:17 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:20 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:23 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:27 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:30 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:33 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:36 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:39 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:42 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:46 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:49 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:52 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:55 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:39:58 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:40:02 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:40:05 - [error] [OPCUA-IIoT-Connector:UDC_New] Error: connect ECONNREFUSED 127.0.0.1:59300
+6 May 14:40:08 - [info] Stopping flows
+6 May 14:40:08 - [info] Stopped flows
