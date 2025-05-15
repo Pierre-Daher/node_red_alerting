@@ -2204,6 +2204,33 @@
         ]
     },
     {
+        "id": "40c7243add7465d7",
+        "type": "inject",
+        "z": "fb3126e4afa64725",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 760,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "d47f404dd3de203d",
         "type": "change",
         "z": "36fdbc5d5d796808",

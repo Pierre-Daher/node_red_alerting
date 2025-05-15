@@ -1,0 +1,18 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "node-red-contrib-email": "~0.3.1",
+        "node-red-contrib-excel": "~0.0.3",
+        "node-red-contrib-iiot-opcua": "~4.1.2",
+        "node-red-contrib-modbus": "~5.43.0",
+        "node-red-contrib-signl4": "~1.11.0",
+        "node-red-contrib-spreadsheet-in": "~0.7.2",
+        "node-red-dashboard": "~3.6.5",
+        "node-red-node-email": "~3.0.2",
+        "node-red-node-openweathermap": "~1.0.1",
+        "node-red-node-twilio": "~0.1.0"
+    }
+}

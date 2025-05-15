@@ -57,7 +57,7 @@
         "id": "3c6eb3759a5ae8f0",
         "type": "tab",
         "label": "Communication _Presse_55T",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -73,7 +73,7 @@
         "id": "0c2a792bad088f5c",
         "type": "tab",
         "label": "Communication_Presse_120T",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -1162,7 +1162,7 @@
         "z": "fb3126e4afa64725",
         "name": "Get Client Status",
         "scope": [
-            "cb676891c931b0e8"
+            "688cabecef99871b"
         ],
         "x": 140,
         "y": 120,
@@ -1353,8 +1353,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1210,
-        "y": 600,
+        "x": 1230,
+        "y": 520,
         "wires": []
     },
     {
@@ -1486,7 +1486,9 @@
         "x": 330,
         "y": 640,
         "wires": [
-            []
+            [
+                "0a6fc73710dad61e"
+            ]
         ]
     },
     {
@@ -1721,11 +1723,32 @@
         ]
     },
     {
+        "id": "688cabecef99871b",
+        "type": "OPCUA-IIoT-Listener",
+        "z": "fb3126e4afa64725",
+        "connector": "4039d7da.be9428",
+        "action": "subscribe",
+        "queueSize": "30",
+        "name": "",
+        "topic": "",
+        "justValue": true,
+        "useGroupItems": false,
+        "showStatusActivities": true,
+        "showErrors": true,
+        "x": 1120,
+        "y": 320,
+        "wires": [
+            [
+                "ad385a442d45bf7e"
+            ]
+        ]
+    },
+    {
         "id": "4a10b7b600180b8a",
         "type": "function",
         "z": "fb3126e4afa64725",
         "name": "Get data 2",
-        "func": "var Proto = \"ns=16;s=Presse_API_Lent_\"\nvar Longueur = Proto.length\n           \n\n// Initialisation de la sortie\n// Récupération du message\nvar Data = msg; \n\n//node.warn(\"msg get datta\" + JSON.stringify(msg, null, 2));\n\n\n\n\n// Récupération de la valeur\nvar Value = Data.payload.value.value;\n\n// récupération du type\nvar DataType = Data.payload.value.dataType;\n\n// récupération de l'horodatage\nvar DateTimeStr = new Date(Data.payload.sourceTimestamp);\nvar DateTime = DateTimeStr.getTime();\n\n\n\n// récupération du nom\nvar Name = Data.addressSpaceItems[0].nodeId.toString().substring(Longueur);\nvar Numero = parseInt(Data.addressSpaceItems[0].nodeId.toString().substring(Longueur,Longueur+3));\n\n// Récupération de l'unité\nvar Unit = global.get(\"varUnitList\")[Numero-1];\n\n// Récupération du format\nvar Format = global.get(\"varFormatList\")[Numero-1];\nif (Format!=\"\"){\n    // @ts-ignore\n    ValueFormat = parseFloat(Value).toFixed(parseInt(Format))\n    // @ts-ignore\n    Value = ValueFormat.toString()\n}\n\n\n// Création de la variable de sortie\nvar myvar_output = {Name,DateTime,Value,Unit};\n\n// Suppression des données existantes\nmsg = {}\nmsg.payload ={}\n\nmsg.payload.data = myvar_output;\n\nreturn msg;\n/* récupération du nom\nvar Name = Data.addressSpaceItems[0].nodeId.toString().substring(Proto.length);\n\n\n// Création de la variable de sortie\nvar myvar_output = {Name,DateTime,Value};\n\n// Suppression des données existantes\nmsg = {}\nmsg.payload ={}\n\nmsg.payload.data = myvar_output;\n//node.warn(JSON.stringify(msg, null, 2));\n\nreturn msg;*/\n",
+        "func": "var Proto = \"ns=16;s=Presse_API_Lent_\"\nvar Longueur = Proto.length\n           \n\n// Initialisation de la sortie\n// Récupération du message\nvar Data = msg; \n\nnode.warn(\"msg get datta\" + JSON.stringify(msg, null, 2));\n\n\n\n\n// Récupération de la valeur\nvar Value = Data.payload.value.value;\n\n// récupération du type\nvar DataType = Data.payload.value.dataType;\n\n// récupération de l'horodatage\nvar DateTimeStr = new Date(Data.payload.sourceTimestamp);\nvar DateTime = DateTimeStr.getTime();\n\n\n\n// récupération du nom\nvar Name = Data.addressSpaceItems[0].nodeId.toString().substring(Longueur);\nvar Numero = parseInt(Data.addressSpaceItems[0].nodeId.toString().substring(Longueur,Longueur+3));\n\n// Récupération de l'unité\nvar Unit = global.get(\"varUnitList\")[Numero-1];\n\n// Récupération du format\nvar Format = global.get(\"varFormatList\")[Numero-1];\nif (Format!=\"\"){\n    // @ts-ignore\n    ValueFormat = parseFloat(Value).toFixed(parseInt(Format))\n    // @ts-ignore\n    Value = ValueFormat.toString()\n}\n\n\n// Création de la variable de sortie\nvar myvar_output = {Name,DateTime,Value,Unit};\n\n// Suppression des données existantes\nmsg = {}\nmsg.payload ={}\n\nmsg.payload.data = myvar_output;\n\nreturn msg;\n/* récupération du nom\nvar Name = Data.addressSpaceItems[0].nodeId.toString().substring(Proto.length);\n\n\n// Création de la variable de sortie\nvar myvar_output = {Name,DateTime,Value};\n\n// Suppression des données existantes\nmsg = {}\nmsg.payload ={}\n\nmsg.payload.data = myvar_output;\n//node.warn(JSON.stringify(msg, null, 2));\n\nreturn msg;*/\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1764,18 +1787,18 @@
         "type": "function",
         "z": "fb3126e4afa64725",
         "name": "Subscribe",
-        "func": "// Get global flag\nvar bConnectLost = global.get('ConnectionLost') || false;\n\n// Default settings\nvar injectMssge = {};\ninjectMssge.topic = \"\";\ninjectMssge.nodetype = \"inject\";\ninjectMssge.injectType = \"listen\";\ninjectMssge.addressSpaceItems = [];\n\nvar optionsParam = {\n    \"requestedPublishingInterval\": 1000,\n    \"requestedLifetimeCount\": 10,\n    \"requestedMaxKeepAliveCount\": 5,\n    \"maxNotificationsPerPublish\": 10,\n    \"publishingEnabled\": true,\n    \"priority\": 10,\n    \"clientName\": \"nr-iot\"\n};\n\ninjectMssge.payload = { \"interval\": 6000, \"queueSize\": 10, \"options\": optionsParam };\n\nnode.warn(\"subscribe msg : \" + JSON.stringify(msg.varNodeIdList, null, 2));\n\n// Récupération du dictionnaire global ou création si inexistant\nvar nodeIdToName = global.get('NodeIdToName') || {};\n\n// Vérification de la validité de varNodeIdList et varNameList\nif (!msg.varNodeIdList || !msg.varNameList) {\n    node.warn(\"Les listes varNodeIdList ou varNameList sont vides ou non définies\");\n    return null; // On arrête ici si les listes sont invalides\n}\n\n// Cas avec une seule variable\nif (!Array.isArray(msg.varNameList) && !Array.isArray(msg.varNodeIdList)) {\n    var nodeId = msg.varNodeIdList;\n    var name = msg.varNameList;\n\n    if (nodeId !== \"invalid\") {\n        injectMssge.addressSpaceItems.push({ \"name\": name, \"nodeId\": nodeId });\n        nodeIdToName[nodeId] = name; // Ajout dans le dictionnaire\n    } else {\n        node.warn(\"NodeId invalide trouvé pour l'élément : \" + JSON.stringify({ name, nodeId }));\n    }\n} else {\n    // Plusieurs variables\n    for (var i = 0; i < msg.varNameList.length; i++) {\n        var nodeId = msg.varNodeIdList[i];\n        var name = msg.varNameList[i];\n\n        // Vérification si le NodeId est valide\n        if (nodeId !== \"invalid\") {\n            injectMssge.addressSpaceItems.push({ \"name\": name, \"nodeId\": nodeId });\n            nodeIdToName[nodeId] = name; // Ajout dans le dictionnaire\n        } else {\n            node.warn(\"NodeId invalide trouvé pour l'élément : \" + JSON.stringify({ name, nodeId }));\n        }\n    }\n}\n\n// Sauvegarde globale\nglobal.set('NodeIdToName', nodeIdToName);\n\n// Lancement de la subscription\nif (bConnectLost === false) {\n    console.log(\"---- FIRST SUBSCRIBE ------\");\n    setTimeout(SendSubscribeMessage, 5000); // ← délai ajouté\n} else {\n    console.log(\"---- CONNECT LOST - RESUBSCRIBE  ------\");\n    setTimeout(SendSubscribeMessage, 5000);\n}\n\n\nfunction SendSubscribeMessage() {\n    node.warn(\"msg avant envoi dans subscribe : \" + JSON.stringify(injectMssge, null, 2));\n\n    // Vérification si les addressSpaceItems contiennent des nodeId valides\n    if (!injectMssge.addressSpaceItems || injectMssge.addressSpaceItems.length === 0) {\n        node.warn(\"Aucun nodeId valide trouvé dans addressSpaceItems\");\n        return null; // On arrête ici si aucun nodeId valide\n    }\n\n    // Ajouter des messages de débogage pour vérifier les nodeId\n    injectMssge.addressSpaceItems.forEach(item => {\n        if (!item.nodeId || item.nodeId === \"invalid\") {\n            node.warn(\"NodeId invalid trouvé pour l'élément : \" + JSON.stringify(item));\n        } else {\n            node.warn(\"NodeId valide trouvé : \" + item.nodeId);\n        }\n    });\n    node.warn(\"subscribe injectMssge : \" + JSON.stringify(injectMssge, null, 2));\n\n    node.send(injectMssge);  // Envoi du message après validation\n}\n",
+        "func": "// Get global flag\nvar bConnectLost = global.get('ConnectionLost') || false;\n\n// Default settings\nvar injectMssge = {};\ninjectMssge.topic = \"\";\ninjectMssge.nodetype = \"inject\";\ninjectMssge.injectType = \"listen\";\ninjectMssge.addressSpaceItems = [];\n\nvar optionsParam = {\n    \"requestedPublishingInterval\": 1000,\n    \"requestedLifetimeCount\": 10,\n    \"requestedMaxKeepAliveCount\": 5,\n    \"maxNotificationsPerPublish\": 10,\n    \"publishingEnabled\": true,\n    \"priority\": 10,\n    \"clientName\": \"nr-iot\"\n};\n\ninjectMssge.payload = { \"interval\": 6000, \"queueSize\": 10, \"options\": optionsParam };\n\nnode.warn(\"subscribe msg : \" + JSON.stringify(msg.varNodeIdList, null, 2));\n\n// Récupération du dictionnaire global ou création si inexistant\nvar nodeIdToName = global.get('NodeIdToName') || {};\n\n// Vérification de la validité de varNodeIdList et varNameList\nif (!msg.varNodeIdList || !msg.varNameList) {\n    node.warn(\"Les listes varNodeIdList ou varNameList sont vides ou non définies\");\n    return null; // On arrête ici si les listes sont invalides\n}\n\n// Cas avec une seule variable\nif (!Array.isArray(msg.varNameList) && !Array.isArray(msg.varNodeIdList)) {\n    var nodeId = msg.varNodeIdList;\n    var name = msg.varNameList;\n\n    if (nodeId !== \"invalid\") {\n        injectMssge.addressSpaceItems.push({ \"name\": name, \"nodeId\": nodeId });\n        nodeIdToName[nodeId] = name; // Ajout dans le dictionnaire\n    } else {\n        node.warn(\"NodeId invalide trouvé pour l'élément : \" + JSON.stringify({ name, nodeId }));\n    }\n} else {\n    // Plusieurs variables\n    for (var i = 0; i < msg.varNameList.length; i++) {\n        var nodeId = msg.varNodeIdList[i];\n        var name = msg.varNameList[i];\n\n        // Vérification si le NodeId est valide\n        if (nodeId !== \"invalid\") {\n            injectMssge.addressSpaceItems.push({ \"name\": name, \"nodeId\": nodeId });\n            nodeIdToName[nodeId] = name; // Ajout dans le dictionnaire\n        } else {\n            node.warn(\"NodeId invalide trouvé pour l'élément : \" + JSON.stringify({ name, nodeId }));\n        }\n    }\n}\n\n// Sauvegarde globale\nglobal.set('NodeIdToName', nodeIdToName);\n\n// Lancement de la subscription\nif (bConnectLost === false) {\n    console.log(\"---- FIRST SUBSCRIBE ------\");\n    setTimeout(SendSubscribeMessage2, 10000); // ← délai ajouté\n} else {\n    console.log(\"---- CONNECT LOST - RESUBSCRIBE  ------\");\n    setTimeout(SendSubscribeMessage2, 10000);\n}\n\n\nfunction SendSubscribeMessage() {\n    node.warn(\"msg avant envoi dans subscribe : \" + JSON.stringify(injectMssge, null, 2));\n\n    // Vérification si les addressSpaceItems contiennent des nodeId valides\n    if (!injectMssge.addressSpaceItems || injectMssge.addressSpaceItems.length === 0) {\n        node.warn(\"Aucun nodeId valide trouvé dans addressSpaceItems\");\n        return null; // On arrête ici si aucun nodeId valide\n    }\n\n    // Ajouter des messages de débogage pour vérifier les nodeId\n    injectMssge.addressSpaceItems.forEach(item => {\n        if (!item.nodeId || item.nodeId === \"invalid\") {\n            node.warn(\"NodeId invalid trouvé pour l'élément : \" + JSON.stringify(item));\n        } else {\n            node.warn(\"NodeId valide trouvé : \" + item.nodeId);\n        }\n    });\n    node.warn(\"subscribe injectMssge : \" + JSON.stringify(injectMssge, null, 2));\n\n    node.send(injectMssge);  // Envoi du message après validation\n}\n\nfunction SendSubscribeMessage2() {\n    node.warn(\"msg avant envoi dans subscribe : \" + JSON.stringify(injectMssge, null, 2));\n\n    if (!injectMssge.addressSpaceItems || injectMssge.addressSpaceItems.length === 0) {\n        node.warn(\"Aucun nodeId valide trouvé dans addressSpaceItems\");\n        return null;\n    }\n\n    injectMssge.addressSpaceItems.forEach(item => {\n        if (!item.nodeId || item.nodeId === \"invalid\") {\n            node.warn(\"NodeId invalide trouvé pour l'élément : \" + JSON.stringify(item));\n        } else {\n            node.warn(\"NodeId valide trouvé : \" + item.nodeId);\n\n            // Crée un message complet avec listenerParameters\n            var msgToSend = {\n                injectType: \"listen\",\n                addressSpaceItems: [\n                    {\n                        name: item.name,\n                        nodeId: item.nodeId\n                    }\n                ],\n                payload: {\n                    listenerParameters: {\n                        interval: injectMssge.payload.interval || 1000,\n                        queueSize: injectMssge.payload.queueSize || 10,\n                        samplingInterval: 0, // ← souvent requis\n                        options: injectMssge.payload.options || {}\n                    }\n                }\n            };\n\n            node.warn(\"Message envoyé : \" + JSON.stringify(msgToSend, null, 2));\n            node.send(msgToSend);\n        }\n    });\n}\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 820,
-        "y": 420,
+        "x": 840,
+        "y": 400,
         "wires": [
             [
-                "cb676891c931b0e8"
+                "688cabecef99871b"
             ]
         ]
     },
@@ -1872,6 +1895,23 @@
         "wires": []
     },
     {
+        "id": "b3790f23e5cc7eed",
+        "type": "debug",
+        "z": "fb3126e4afa64725",
+        "name": "debug register",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 260,
+        "wires": []
+    },
+    {
         "id": "cd8857afaa227281",
         "type": "debug",
         "z": "fb3126e4afa64725",
@@ -1893,18 +1933,19 @@
         "type": "function",
         "z": "fb3126e4afa64725",
         "name": "Spy",
-        "func": "//node.warn(\"msg spy \" + JSON.stringify(msg, null, 2));\n\n// Vérifie la structure du message\nif (!msg.payload || !msg.payload.value || msg.payload.value.value === undefined) {\n    node.warn(\"Message invalide ou incomplet\");\n    return null;\n}\n\n// Récupère le nodeId depuis addressSpaceItems\nlet nodeId = \"unknownNode\";\nif (msg.addressSpaceItems && msg.addressSpaceItems.length > 0) {\n    nodeId = msg.addressSpaceItems[0].nodeId;\n}\n\n// Récupère le nom mappé (depuis global context)\nconst nodeMap = global.get(\"NodeIdToName\") || {};\nconst name = nodeMap[nodeId] || nodeId;\n\n// Extraction des infos\nconst value = msg.payload.value.value;\nconst timestamp = new Date(msg.payload.sourceTimestamp || Date.now()).toISOString();\nconst dataType = msg.payload.value.dataType || \"unknown\";\n\n// Construction du nouveau payload\nmsg.payload = {\n    name: name,\n    nodeId: nodeId,\n    value: value,\n    dataType: dataType,\n    timestamp: timestamp\n};\n\nreturn msg;\n\n",
+        "func": "const item = msg.payload;\n\nnode.warn(\"msg spy\" +JSON.stringify(msg, null, 2));\n\nif (!item || !item.value || item.value.value === undefined) {\n    node.warn(\"Message invalide ou incomplet\");\n    return null;\n}\n\nconst nodeMap = global.get(\"NodeIdToName\") || {};\nconst nodeId = item.nodeId || \"unknownNode\"; // Vérifie ici que le nodeId est bien reçu\nnode.warn(\"pares lsiteber  msg : \" + msg);\n\nconst name = nodeMap[nodeId] || nodeId; // Vérifie que le nodeId est bien mappé avec un nom\n\nconst value = item.value.value;\nconst timestamp = new Date(item.sourceTimestamp || Date.now()).toISOString();\nconst dataType = item.value.dataType || \"unknown\";\n\nmsg.payload = {\n    name: name,\n    value: value,\n    dataType: dataType,\n    timestamp: timestamp\n};\n\nreturn msg;\n\n\n/*\nif (!item || !item.value || item.value.value === undefined) {\n    node.warn(\"Message invalide ou incomplet\");\n    return null;\n}\n\n\nconst nodeMap = global.get(\"NodeIdToName\") || {};\nconst nodeId = item.nodeId || \"unknownName\";  // ← Ici l'important;\nconst name = nodeMap[nodeId] || \"unknownNode\";  // ← Ici l'important;\n\n//node.warn(JSON.stringify(msg, null, 2));\n\n\nconst value = item.value.value;\nconst timestamp = new Date(item.sourceTimestamp || Date.now()).toISOString();\nconst dataType = item.value.dataType || \"unknown\";\n\nmsg.payload = {\n    name: name,\n    value: value,\n    dataType: dataType,\n    timestamp: timestamp\n};\n\nreturn msg;\n*/",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1210,
-        "y": 420,
+        "x": 1410,
+        "y": 340,
         "wires": [
             [
-                "8edeae12b04362a4"
+                "8edeae12b04362a4",
+                "cddb596886c86d52"
             ]
         ]
     },
@@ -1924,8 +1965,8 @@
         "strings": true,
         "include_empty_strings": "",
         "include_null_values": "",
-        "x": 1590,
-        "y": 420,
+        "x": 1790,
+        "y": 360,
         "wires": [
             []
         ]
@@ -1941,8 +1982,8 @@
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 1410,
-        "y": 420,
+        "x": 1610,
+        "y": 360,
         "wires": [
             [
                 "e3b5b066c2f83828"
@@ -1956,9 +1997,45 @@
         "name": "link out 7",
         "mode": "link",
         "links": [],
-        "x": 1165,
-        "y": 520,
+        "x": 1145,
+        "y": 480,
         "wires": []
+    },
+    {
+        "id": "8d31cfc8ddebe29c",
+        "type": "function",
+        "z": "fb3126e4afa64725",
+        "name": "register in flow",
+        "func": "if (msg.addressSpaceItems && Array.isArray(msg.addressSpaceItems)) {\n    for (let i = 0; i < msg.addressSpaceItems.length; i++) {\n        let item = msg.addressSpaceItems[i];\n        let rawKey = item.nodeId;\n\n        if (!rawKey || rawKey === \"invalid\") {\n            node.warn(\"⚠ NodeId invalide trouvé pour l'élément : \" + JSON.stringify(item));\n            continue; // Ignore cet élément\n        }\n\n        if (item.nodeId && item.nodeId !== \"invalid\") {\n            let key = item.nodeId.replace(/[^\\w]/g, '_');\n            let value = {\n                name: item.name || \"\",\n                nodeId: item.nodeId,\n                browseName: item.browseName || \"\"\n            };\n\n            node.warn(`Enregistrement dans le flow context : ${key} => ${JSON.stringify(value)}`);\n            flow.set(key, value); // Enregistrement dans le flow context uniquement si nodeId est valide\n        } else {\n            node.warn(\"⚠ NodeId invalide trouvé, non enregistré : \" + JSON.stringify(item));\n        }\n\n    }\n}\nnode.warn(\"Le topic du message avant envoi : \" + JSON.stringify(msg.topic));\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ad385a442d45bf7e",
+        "type": "function",
+        "z": "fb3126e4afa64725",
+        "name": "fusion",
+        "func": "node.warn(\"msg fusion (avant extraction du nodeId) : \" + JSON.stringify(msg, null, 2));\n\nlet rawNodeId = msg.topic || (msg.payload && msg.payload.nodeId);\n\n// Vérifie la validité de rawNodeId\nif (!rawNodeId || rawNodeId === \"invalid\") {\n    node.warn(\"⚠ Clé nodeId invalide ou absente : \" + rawNodeId);\n    return null;\n}\n\nnode.warn(\"Raw NodeId extrait : \" + rawNodeId);\n\n// Nettoie la clé pour le flow context\nlet key = rawNodeId.replace(/[^\\w]/g, '_');\nnode.warn(\"🔍 Recherche dans flow context avec clé : \" + key);\n\nlet meta = flow.get(key);\n\nif (meta) {\n    msg.nodeId = meta.nodeId;\n    msg.name = meta.name;\n    msg.browseName = meta.browseName;\n} else {\n    msg.nodeId = rawNodeId;\n    msg.name = \"non défini\";\n    msg.browseName = \"\";\n    node.warn(\"⚠ Métadonnées introuvables pour la clé : \" + key);\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 340,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "792a4fb42ee7f9ba",
@@ -2057,15 +2134,32 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1550,
+        "x": 1650,
         "y": 300,
+        "wires": []
+    },
+    {
+        "id": "cd7bf820fa2215e4",
+        "type": "debug",
+        "z": "fb3126e4afa64725",
+        "name": "Test",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1430,
+        "y": 440,
         "wires": []
     },
     {
         "id": "68ccecf843da8485",
         "type": "debug",
         "z": "fb3126e4afa64725",
-        "name": "debug listener",
+        "name": "debug 19",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -2074,48 +2168,38 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1200,
-        "y": 320,
+        "x": 1280,
+        "y": 400,
         "wires": []
     },
     {
-        "id": "cb676891c931b0e8",
-        "type": "OPCUA-IIoT-Listener",
+        "id": "f96766c62489d474",
+        "type": "OpcUa-Client",
         "z": "fb3126e4afa64725",
-        "connector": "4039d7da.be9428",
-        "action": "subscribe",
-        "queueSize": 10,
+        "endpoint": "",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "setstatusandtime": false,
+        "keepsessionalive": false,
         "name": "",
-        "topic": "",
-        "justValue": true,
-        "useGroupItems": false,
-        "showStatusActivities": true,
-        "showErrors": true,
-        "x": 1020,
-        "y": 420,
+        "x": 1080,
+        "y": 400,
         "wires": [
-            [
-                "90897509371126e1",
-                "0a6fc73710dad61e",
-                "68ccecf843da8485"
-            ]
-        ]
-    },
-    {
-        "id": "d153d911192f2016",
-        "type": "function",
-        "z": "fb3126e4afa64725",
-        "name": "old subscribe",
-        "func": "//Get global flag\nvar bConnectLost = global.get('ConnectionLost') || false;\n\n//Default settings\nvar injectMssge = {};\ninjectMssge.topic=\"\";\ninjectMssge.nodetype=\"inject\";\ninjectMssge.injectType=\"listen\";\ninjectMssge.addressSpaceItems=[];\n//injectMssge.payload=1000;\nvar optionsParam = {\n            \"requestedPublishingInterval\": 1000,\n            //\"requestedLifetimeCount\": 99999,\n            \"requestedLifetimeCount\": 10,\n            \"requestedMaxKeepAliveCount\": 5,\n            \"maxNotificationsPerPublish\": 10,\n            \"publishingEnabled\": true,\n            \"priority\": 10,\n            \"clientName\":\"nr-iot\",\n      };\n\ninjectMssge.payload={ \"interval\": 6000, \"queueSize\": 10, \"options\":optionsParam };\n\n//Specific case if the configuration contains only one variable\nif(Array.isArray(msg.varNameList) === false)\n {\n    injectMssge.addressSpaceItems.push({\"name\": msg.varNameList, \"nodeId\":  msg.varNodeIdList}); \n }\n else\n {\n    //Add variables\n    for(var iIndVar=0;iIndVar<msg.varNameList.length; iIndVar++)\n    {\n      injectMssge.addressSpaceItems.push( {\"name\": msg.varNameList[iIndVar], \"nodeId\":  msg.varNodeIdList[iIndVar]});\n    }\n }\n\n if(bConnectLost === false)\n {\n   console.log(\"---- FIRST SUBSCRIBE ------\")\n   SendSubscribeMessage();\n }\n else\n {\n    //In case of connection lost, send another subscription\n    console.log(\"---- CONNECT LOST - RESUBSCRIBE  ------\")\n    SendSubscribeMessage();\n    setTimeout(SendSubscribeMessage, 5000);\n  }\n  \n  //Send inject message\n  function SendSubscribeMessage()\n  {\n    node.send(injectMssge);\n  }\n  \n  ",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 830,
-        "y": 360,
-        "wires": [
+            [],
+            [],
             []
         ]
     },
