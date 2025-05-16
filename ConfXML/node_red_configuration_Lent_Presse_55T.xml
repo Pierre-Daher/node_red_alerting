@@ -1,0 +1,10 @@
+<Variables>
+<Variable Name="temp_lunet_1" NodeId="ns=16;s=Presse_NTE_API_Lent_temp_lunet_1"/>
+<Variable Name="temp_lunet_2" NodeId="ns=16;s=Presse_NTE_API_Lent_temp_lunet_2"/>
+<Variable Name="ener_four_p1" NodeId="ns=16;s=Presse_NTE_API_Lent_ener_four_p1"/>
+<Variable Name="ener_four_p2" NodeId="ns=16;s=Presse_NTE_API_Lent_ener_four_p2"/>
+<Variable Name="ener_four_p3" NodeId="ns=16;s=Presse_NTE_API_Lent_ener_four_p3"/>
+<Variable Name="temp_moule_sup" NodeId="ns=16;s=Presse_NTE_API_Lent_temp_moule_sup"/>
+<Variable Name="temp_moule_inf" NodeId="ns=16;s=Presse_NTE_API_Lent_temp_moule_inf"/>
+<Variable Name="temp_amb_four" NodeId="ns=16;s=Presse_NTE_API_Lent_temp_amb_four"/>
+</Variables>

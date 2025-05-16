@@ -1,0 +1,4 @@
+<Variables>
+	<Variable Name="001_Ch1_Value" NodeId="ns=16;s=uDC_TARBES_NANODAC_SOUTE_001_Ch1_Value" Unit="" Format="#,#"/>
+	<Variable Name="003_Ch3_Value" NodeId="ns=16;s=uDC_TARBES_NANODAC_SOUTE_003_Ch3_Value" Unit="" Format="#,#"/>
+</Variables>

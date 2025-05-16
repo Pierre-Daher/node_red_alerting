@@ -1,0 +1,8 @@
+<Variables>
+<Variable Name="vitesse_rotation" NodeId="ns=16;s=uDC_NTE_Belotti_001_Palpage_MVT_broche_Chg_OT_1"/>
+<Variable Name="vitesse_x" NodeId="ns=16;s=uDC_NTE_Belotti_002_Palpage_MVT_broche_Chg_OT_2"/>
+<Variable Name="vitesse_y" NodeId="ns=16;s=uDC_NTE_Belotti_003_Rotation_broche"/>
+<Variable Name="vitesse_z" NodeId="ns=16;s=uDC_NTE_Belotti_004_Soufflage_actif"/>
+<Variable Name="puissance" NodeId="ns=16;s=uDC_NTE_Belotti_005_Comptage_pc_1"/>
+<Variable Name="puissance" NodeId="ns=16;s=uDC_NTE_Belotti_006_Comptage_pc_2"/>
+</Variables>

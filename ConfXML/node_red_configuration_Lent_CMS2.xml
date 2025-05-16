@@ -1,0 +1,6 @@
+<Variables>
+<Variable Name="001_Horloge_Vie" NodeId="ns=16;s=uDC_NTE_CMS2_001_Horloge_Vie"/>
+<Variable Name="002_Fep_Fin_Cyc" NodeId="ns=16;s=uDC_NTE_CMS2_002_Fep_Fin_Cyc"/>
+<Variable Name="003_Rot_Broche" NodeId="ns=16;s=uDC_NTE_CMS2_003_Rot_Broche"/>
+<Variable Name="004_Souff_Act" NodeId="ns=16;s=uDC_NTE_CMS2_004_Souff_Act"/>
+</Variables>
