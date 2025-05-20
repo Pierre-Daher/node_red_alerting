@@ -1,5 +1,5 @@
 <Variables>
-	<Variable Name="001_Calcul_puissance_ph1_n_voute" NodeId="ns=16;s=Presse_API_Lent_001_Calcul_puissance_ph1_n_voute" Unit="" Format="#,#" Min="1" Max="200"/>
+	<Variable Name="001_Calcul_puissance_ph1_n_voute" NodeId="ns=16;s=Presse_API_Lent_001_Calcul_puissance_ph1_n_voute" Unit="" Format="#,#" Min="" Max="6"/>
 	<Variable Name="002_Calcul_puissance_ph2_n_voute" NodeId="ns=16;s=Presse_API_Lent_002_Calcul_puissance_ph2_n_voute" Unit="" Format="#,#" Min="2" Max="200"/>
 	<Variable Name="003_Calcul_puissance_ph3_n_voute" NodeId="ns=16;s=Presse_API_Lent_003_Calcul_puissance_ph3_n_voute" Unit="" Format="#,#" Min="3" Max="200"/>
 	<Variable Name="004_Calcul_puissance_ph1_n_sole" NodeId="ns=16;s=Presse_API_Lent_004_Calcul_puissance_ph1_n_sole" Unit="" Format="#,#" Min="4" Max="300"/>
@@ -8,7 +8,7 @@
 	<Variable Name="007_Calcul_puissance_ph1_n_chaudiere_inf" NodeId="ns=16;s=Presse_API_Lent_007_Calcul_puissance_ph1_n_chaudiere_inf" Unit="" Format="#,#" Min="7" Max="600"/>
 	<Variable Name="008_Calcul_puissance_ph2_n_chaudiere_inf" NodeId="ns=16;s=Presse_API_Lent_008_Calcul_puissance_ph2_n_chaudiere_inf" Unit="" Format="#,#" Min="8" Max="700" />
 	<Variable Name="009_Calcul_puissance_ph3_n_chaudiere_inf" NodeId="ns=16;s=Presse_API_Lent_009_Calcul_puissance_ph3_n_chaudiere_inf" Unit="" Format="#,#" Min="9" Max="809"/>
-	<Variable Name="010_mesure position presse relative" NodeId="ns=16;s=Presse_API_Lent_010_mesure position presse relative" Unit="" Format="#,#" Min="10" Max="810"/>
+	<Variable Name="010_mesure position presse relative" NodeId="ns=16;s=Presse_API_Lent_010_mesure position presse relative" Unit="" Format="#,#" Min="" Max=""/>
 	<Variable Name="011_Nombre_pièce_à_produire_of" NodeId="ns=16;s=Presse_API_Lent_011_Nombre_pièce_à_produire_of" Unit="" Format="#,#" Min="11" Max="811"/>
 	<Variable Name="012_Cpt_pièces_produite_of" NodeId="ns=16;s=Presse_API_Lent_012_Cpt_pièces_produite_of" Unit="" Format="#,#" Min="12" Max="812"/>
 	<Variable Name="013_Rec_num_prog_code_outil" NodeId="ns=16;s=Presse_API_Lent_013_Rec_num_prog_code_outil" Unit="" Format="#,#" Min="13" Max="813"/>

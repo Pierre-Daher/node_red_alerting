@@ -3,7 +3,7 @@
         "id": "fb3126e4afa64725",
         "type": "tab",
         "label": "Communication",
-        "disabled": true,
+        "disabled": false,
         "info": ""
     },
     {
@@ -1212,8 +1212,8 @@
         "scope": [
             "cb676891c931b0e8"
         ],
-        "x": 140,
-        "y": 140,
+        "x": 100,
+        "y": 120,
         "wires": [
             [
                 "b1da16de66de99c6"
@@ -1293,7 +1293,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 530,
-        "y": 700,
+        "y": 860,
         "wires": [
             [
                 "91432bfb8513d8b6"
@@ -1504,8 +1504,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 150,
-        "y": 620,
+        "x": 130,
+        "y": 740,
         "wires": [
             [
                 "59954d137d9e76c6"
@@ -1531,10 +1531,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 330,
-        "y": 640,
+        "x": 320,
+        "y": 740,
         "wires": [
-            []
+            [
+                "09b60acc4ce1e7ac",
+                "ba1fb2ac23b9bb35"
+            ]
         ]
     },
     {
@@ -1554,7 +1557,7 @@
         "drop": false,
         "outputs": 1,
         "x": 470,
-        "y": 840,
+        "y": 1000,
         "wires": [
             [
                 "76453474778c9a31"
@@ -1681,7 +1684,7 @@
         "repair": false,
         "outputs": 1,
         "x": 270,
-        "y": 840,
+        "y": 1000,
         "wires": [
             [
                 "f49271208f2d133d"
@@ -1697,7 +1700,7 @@
             "3e75ca8ce7cd4fea"
         ],
         "x": 100,
-        "y": 840,
+        "y": 1000,
         "wires": [
             [
                 "f7a0292ea4ad94de"
@@ -1738,7 +1741,7 @@
             }
         ],
         "x": 110,
-        "y": 700,
+        "y": 860,
         "wires": [
             [
                 "3e75ca8ce7cd4fea"
@@ -1761,7 +1764,7 @@
         "historyDays": 1,
         "serverMaxItemsToRead": "",
         "x": 290,
-        "y": 700,
+        "y": 860,
         "wires": [
             [
                 "76453474778c9a31"
@@ -1776,8 +1779,8 @@
         "showStatusActivities": false,
         "showErrors": false,
         "connector": "4039d7da.be9428",
-        "x": 780,
-        "y": 700,
+        "x": 840,
+        "y": 860,
         "wires": [
             []
         ]
@@ -1911,8 +1914,8 @@
         "z": "fb3126e4afa64725",
         "name": "Machine Data Capture in CSV",
         "info": "Refining the final file by including variable names\n\nNote: The acquisition\nmust be stopped manually;\notherwise,\nit will run in an infinite loop",
-        "x": 1500,
-        "y": 220,
+        "x": 1400,
+        "y": 320,
         "wires": []
     },
     {
@@ -2089,40 +2092,6 @@
         "wires": []
     },
     {
-        "id": "cddb596886c86d52",
-        "type": "debug",
-        "z": "fb3126e4afa64725",
-        "name": "debug spy",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1550,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "68ccecf843da8485",
-        "type": "debug",
-        "z": "fb3126e4afa64725",
-        "name": "debug listener",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1200,
-        "y": 320,
-        "wires": []
-    },
-    {
         "id": "cb676891c931b0e8",
         "type": "OPCUA-IIoT-Listener",
         "z": "fb3126e4afa64725",
@@ -2206,10 +2175,69 @@
         "id": "51c35b8f9d305b0e",
         "type": "comment",
         "z": "fb3126e4afa64725",
-        "name": "prepration dashboard",
+        "name": "preparation dashboard",
         "info": "ajout du nom, min, max\nà partir des variables globales xml\n",
         "x": 660,
         "y": 600,
+        "wires": []
+    },
+    {
+        "id": "09b60acc4ce1e7ac",
+        "type": "function",
+        "z": "fb3126e4afa64725",
+        "name": "initGlobalFunctions",
+        "func": "global.set(\"manageGaugeColor\", function(msg, minGaugeVal, maxGaugeVal, div_factor=1) {\n    if (!msg || !msg.payload || !msg.payload.data) {\n        return null;\n    }\n\n    const data = msg.payload.data;\n\n    if (data.Value === undefined || data.Min === undefined || data.Max === undefined) return null;\n\n    const value = parseFloat(data.Value) / div_factor;\n    const min = parseFloat(data.Min);\n    const max = parseFloat(data.Max);\n\n\n    // Important : msg.payload = valeur attendue par la gauge\n    msg.payload = value;\n\n    if (isNaN(value)) return null;\n\n    // Base de configuration\n    msg.ui_control = {\n        min: minGaugeVal,\n        max: maxGaugeVal\n    };\n\n    const labels = [];\n    const colors = [];\n\n    // Cas 1 : Min ET Max sont définis → 3 segments : Bas / OK / Haut\n    if (!isNaN(min) && !isNaN(max)) {\n        msg.ui_control.seg1 = min;\n        msg.ui_control.seg2 = max;\n\n        labels.push(\"Bas\", \"OK\", \"Haut\");\n        colors.push(\"#ff0000\", \"#00ff00\", \"#ff0000\"); // Rouge / Vert / Rouge\n    }\n\n    // Cas 2 : Uniquement Min est défini → 2 segments : Bas / Normal\n    else if (!isNaN(min)) {\n        msg.ui_control.seg1 = min;\n\n        labels.push(\"Bas\", \"OK\");\n        colors.push(\"#ff0000\", \"#00ff00\");\n    }\n\n    // Cas 3 : Uniquement Max est défini → 2 segments : OK / Haut\n    else if (!isNaN(max)) {\n        msg.ui_control.seg1 = max;\n\n        labels.push(\"OK\", \"Haut\");\n        colors.push(\"#00ff00\", \"#ff0000\");\n    }\n\n    // Cas 4 : Aucun min/max défini → 1 seule zone par défaut\n    else {\n        labels.push(\"Valeur\");\n        colors.push(\"#00bfff\"); // Bleu\n    }\n\n    msg.ui_control.labels = labels;\n    msg.ui_control.colors = colors;\n\n    msg.className = (value < min || value > max) ? \"gauge-alert\" : \"gauge-normal\";\n\n    // On peut stocker les infos d'origine dans msg.data si besoin\n    msg.data = data;\n\n    return msg;\n});\n\n\nglobal.set(\"manageChartSeries\", function (msg, div_factor = 1) {\n    const data = msg.payload.data;\n\n    const value = parseFloat(data.Value) / div_factor;\n    const name = data.Name || \"Value\";\n\n    const result = [];\n\n    // Série principale\n    result.push({\n        topic: name,\n        payload: value\n    });\n\n    // Ligne Min\n    if (data.Min !== undefined) {\n        result.push({\n            topic: \"Min\",\n            payload: parseFloat(data.Min),\n            color: \"#ffffff\"\n        });\n    }\n\n    // Ligne Max\n    if (data.Max !== undefined) {\n        result.push({\n            topic: \"Max\",\n            payload: parseFloat(data.Max),\n            color: \"#ffffff\"\n        });\n    }\n\n    return result;\n});\n\n\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ba1fb2ac23b9bb35",
+        "type": "ui_template",
+        "z": "fb3126e4afa64725",
+        "group": "1b34a412bfc51b15",
+        "name": "GaugeStyle",
+        "order": 48,
+        "width": 0,
+        "height": 0,
+        "format": "<style id=\"gauge-style-patch\">\n    /* Renforce la spécificité */\n    md-card.gauge-alert .nr-dashboard-gauge-title,\n    md-card.gauge-alert .nr-dashboard-gauge-titlel,\n    md-card.gauge-alert .nr-dashboard-gauge-titlem,\n    md-card.gauge-alert .nr-dashboard-gauge-titles {\n        color: red !important;\n    }\n\n    md-card.gauge-normal .nr-dashboard-gauge-title,\n    md-card.gauge-normal .nr-dashboard-gauge-titlel,\n    md-card.gauge-normal .nr-dashboard-gauge-titlem,\n    md-card.gauge-normal .nr-dashboard-gauge-titles {\n        color: black !important;\n    }\n</style>\n\n<script>\n(function() {\n    // Assure l'application du style même après render dynamique\n    const applyColor = () => {\n        document.querySelectorAll(\"md-card.gauge-alert .nr-dashboard-gauge-title\").forEach(el => {\n            el.style.color = \"red\";\n        });\n        document.querySelectorAll(\"md-card.gauge-normal .nr-dashboard-gauge-title\").forEach(el => {\n            el.style.color = \"green\";\n        });\n    };\n\n    // Premier passage\n    applyColor();\n\n    // Observe les mutations du DOM (gauges chargées après coup)\n    const observer = new MutationObserver(() => {\n        applyColor();\n    });\n\n    observer.observe(document.body, { childList: true, subtree: true });\n})();\n</script>\n\n<script>\n    (function() {\n    const setNeedleColor = (className, color) => {\n        const cards = document.querySelectorAll(`md-card.${className}`);\n        cards.forEach(card => {\n            const paths = card.querySelectorAll(\"svg path\");\n            paths.forEach(path => {\n                const isNeedle = path.getAttribute(\"fill\") && path.getAttribute(\"fill\") !== \"#7f7f7f\";\n                if (isNeedle) {\n                    path.setAttribute(\"fill\", color);\n                }\n            });\n        });\n    };\n\n    const update = () => {\n        setNeedleColor(\"gauge-alert\", \"#ff0000\");\n        setNeedleColor(\"gauge-normal\", \"#00ff00\");\n    };\n\n    update();\n\n    const observer = new MutationObserver(() => {\n        update();\n    });\n\n    observer.observe(document.body, { childList: true, subtree: true });\n})();\n</script>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 550,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb3100e5d284b0f0",
+        "type": "comment",
+        "z": "fb3126e4afa64725",
+        "name": "couleur titre des gauges",
+        "info": "permlet de définir le css pour la couleur de stitres des gauges",
+        "x": 580,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "20ca0a35ac661d12",
+        "type": "comment",
+        "z": "fb3126e4afa64725",
+        "name": "declaration des fonctions globales",
+        "info": "",
+        "x": 560,
+        "y": 660,
         "wires": []
     },
     {
@@ -2272,18 +2300,20 @@
         "type": "function",
         "z": "36fdbc5d5d796808",
         "name": "001_Calcul_puissance_ph1_n_voute",
-        "func": "   \nif (msg.payload.data.Name == \"001_Calcul_puissance_ph1_n_voute\") {\n    msg.payload = (msg.payload.data.Value)/1000\n    return msg;\n}",
-        "outputs": 1,
+        "func": "if (msg.payload?.data?.Name !== \"001_Calcul_puissance_ph1_n_voute\") {\n    return null;\n}\n\nnode.warn(\"gaugeOutput  msg: \" + JSON.stringify(msg, null, 2));\n\n// Clone pour préserver le payload original\nconst original = RED.util.cloneMessage(msg);\n\n// Pour le chart \nlet chartMsg = RED.util.cloneMessage(original);\n\nconst manageChartSeries = global.get(\"manageChartSeries\"); // focntion globale definie apres la connexion\n\n// Appel de la fonction pour ajouter les lignes Min/Max\nchartMsg = manageChartSeries(chartMsg, 1000); // 1000 pour passer en kw\n\n// Pour la gauge (avec fonction globale et ui_control)\nlet gaugeMsg = RED.util.cloneMessage(original);\n\n// pour le flux vers la gauge on met dynamiquement à jours les limites de la gauge\nconst manageGaugeColor = global.get(\"manageGaugeColor\");// fonction globale definie apres la connexion\n\nconst gaugeOutput = manageGaugeColor(gaugeMsg, 0, 20, 1000);// 1000 pour passer en kw\n\nif (!gaugeOutput) return [chartMsg, null];\nnode.warn(\"gaugeOutput className: \" + JSON.stringify(gaugeOutput.className, null, 2));\nnode.warn(\"chartMsg : \" + JSON.stringify(chartMsg, null, 2));\n\n// on a un flux vers le chart et un vert la gauge\nreturn [chartMsg, gaugeOutput];\n",
+        "outputs": 2,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
-        "y": 280,
+        "x": 750,
+        "y": 300,
         "wires": [
             [
-                "5b947bdf312b779c",
+                "5b947bdf312b779c"
+            ],
+            [
                 "7aa8e9f5db538ddd"
             ]
         ]
@@ -2299,7 +2329,7 @@
         "height": "10",
         "label": "Puissance Four Voute phase 1 (kW)",
         "chartType": "line",
-        "legend": "false",
+        "legend": "true",
         "xformat": "HH:mm:ss",
         "interpolate": "linear",
         "nodata": "",
@@ -2326,7 +2356,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1180,
+        "x": 1170,
         "y": 280,
         "wires": [
             []
@@ -2352,12 +2382,12 @@
             "#e6e600",
             "#ca3838"
         ],
-        "seg1": "60",
-        "seg2": "70",
+        "seg1": "",
+        "seg2": "",
         "diff": false,
-        "className": "",
-        "x": 1180,
-        "y": 360,
+        "className": "{{msg.className}}",
+        "x": 1170,
+        "y": 340,
         "wires": []
     },
     {
@@ -3451,8 +3481,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
-        "y": 120,
+        "x": 640,
+        "y": 140,
         "wires": [
             [
                 "262afbd1fd2556c4"
@@ -3474,26 +3504,8 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 980,
-        "y": 120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "15a7ad13b47fed34",
-        "type": "function",
-        "z": "36fdbc5d5d796808",
-        "name": "setMinMaxLines",
-        "func": "const data = msg.payload.data;\n\nif (!data || !data.Name || !data.Value) return null;\n\nconst name = data.Name;\nconst timestamp = new Date(data.DateTime || Date.now());\nconst value = parseFloat(data.Value);\nconst min = data.Min !== undefined && data.Min !== \"\" ? parseFloat(data.Min) : null;\nconst max = data.Max !== undefined && data.Max !== \"\" ? parseFloat(data.Max) : null;\n\nconst chartData = [\n    {\n        series: name,\n        data: [{ x: timestamp, y: value }],\n        labels: [data.Unit || name]\n    }\n];\n\nif (min !== null) {\n    chartData.push({\n        series: `${name}_min`,\n        data: [{ x: timestamp, y: min }],\n        labels: [\"Min\"]\n    });\n}\n\nif (max !== null) {\n    chartData.push({\n        series: `${name}_max`,\n        data: [{ x: timestamp, y: max }],\n        labels: [\"Max\"]\n    });\n}\n\nmsg.payload = chartData;\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 520,
-        "y": 280,
+        "x": 950,
+        "y": 140,
         "wires": [
             []
         ]
